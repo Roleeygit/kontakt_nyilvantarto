@@ -1,0 +1,15 @@
+Feladatok:
+
+1. Egyszerű adatbázis létrehozása, amelyben a kontaktokat tároljuk. A kontaktok következő adatokkal rendelkeznek:
+• név
+• telefonszám
+• cím
+Megvalósítandó feladat a kontakt felvitele, módosítása, törlése, listázása név, és telefonszám alapján
+
+2. Nyilvántartjuk az egyes kontaktokhoz tartozó cégeket. Egy egy kontakthoz nem feltétlenül szükséges cég tartozzon. A cégeket egy külön táblában tároljuk, 
+• cégnév
+• cím
+Megvalósítandó a cégek felvitele, módosítása, törlése, listázása név, és cím alapján, valamit az cég hozzárendelése meglevő kontakthoz, és kontakt listázása cég alapján.
+
+3. Kontaktok adatainak bővítése email címekkel. Egy kontakthoz több email cím is tartozhat (pl. üzleti, személyes)
+Az email cím alapvető szintaktikai ellenőrzése, hozzáadás, módosítás, törlés. Ha egy email cím már egy másik kontakthoz hozzá van kapcsolva, akkor annak jelzése.
