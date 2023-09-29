@@ -1,3 +1,13 @@
+-- 1. feladathoz:
+
+CREATE TABLE customers 
+(
+    id BIGINT(20) PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255),
+    phone VARCHAR(15),
+    address VARCHAR(255),
+);
+
 -- Az idegen kulcs miatt ezt kell hamarabb létrehozni
 CREATE TABLE companies 
 (

@@ -5,15 +5,12 @@ $userName = "root";
 $password = ""; 	
 $dbName = "nyilvantarto";
 
-$con = mysqli_connect($serverName, $userName, $password, $dbName);
+$conn =new mysqli($serverName, $userName, $password, $dbName);
 
-if(mysqli_connect_errno()) 
+if(!$conn)
 {
-    echo "Csatlakozás sikertelen! Próbálkozz újra.";
-    exit();
+    die(mysqli_error($conn));
 }
-echo "Sikeres csatlakozás!"
 
+// localhoston tesztelve, a connection működik.
 ?>
-
--- localhoston tesztelve, a connection működik.
