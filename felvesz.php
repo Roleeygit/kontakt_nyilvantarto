@@ -11,7 +11,8 @@ if(isset($_POST['submit'])){
     $result=mysqli_query($conn,$sql);
 
     if($result){
-        echo "Sikeres felvétel!";
+        // echo "Sikeres felvétel!";
+        header('location:kontakt_listazasa.php');
     }else{
         echo "Hiba a felvétel során: " . mysqli_error($conn);
     }
@@ -46,7 +47,8 @@ if(isset($_POST['submit'])){
     <input type="address" name="address" class="form-control" id="address" placeholder="Írd ide a felvenni kívánt lakcímet">
   </div>
 
-  <button type="submit" class="btn btn-primary" name="submit">Felvétel</button>
+  <button type="submit" class="btn btn-outline-primary" name="submit">Felvétel</button>
+  <button type="submit" class="btn btn-outline-success" name="list"><a href="kontakt_listazasa.php" style="text-decoration:none;" class="text-black">Kontaktok</a></button>
 
 </form>
     </div>
