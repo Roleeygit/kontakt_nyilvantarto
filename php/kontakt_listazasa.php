@@ -47,7 +47,11 @@ if (isset($_GET['success']) && $_GET['success'] == 2)
             {
                 alert.style.display = "none";
             }
-            window.location.href = 'kontakt_listazasa.php';
+            var urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('success')) 
+            {
+                window.location.href = 'kontakt_listazasa.php';
+            }
         }, 2000);
     }
 
