@@ -1,5 +1,9 @@
 <?php
 include 'db.php';
+
+$successMessage = "";
+$updateSuccessful = false;
+
 if(isset($_POST['submit'])){
     $name=$_POST['name'];
     $phone=$_POST['phone'];
@@ -10,11 +14,23 @@ if(isset($_POST['submit'])){
 
     $result=mysqli_query($conn,$sql);
 
-    if($result){
-        // echo "Sikeres felvétel!";
-        header('location:kontakt_listazasa.php');
-    }else{
-        echo "Hiba a felvétel során: " . mysqli_error($conn);
+    if($result)
+    {
+      $updateSuccessful = true;
+      $successMessage = "Sikeres felvétel.";
+        // header('location:kontakt_listazasa.php');
+    }else
+    {
+      $updateSuccessful = false;
+      echo "Hiba a felvétel során.";
+        die(mysqli_error($conn));
+    }
+    if ($updateSuccessful)
+    {
+        header('location: kontakt_listazasa.php?success=0');
+    } else 
+    {
+        echo "A felvétel sikeres!";
     }
 }
 ?>

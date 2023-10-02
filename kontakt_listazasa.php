@@ -1,6 +1,11 @@
 <?php
 include 'db.php';
 
+
+if (isset($_GET['success']) && $_GET['success'] == 0) 
+{
+  $successMessage = "Sikeres felvétel!";
+}
 if (isset($_GET['success']) && $_GET['success'] == 1) 
 {
   $successMessage = "Sikeres módosítás!";
@@ -8,8 +13,8 @@ if (isset($_GET['success']) && $_GET['success'] == 1)
 if (isset($_GET['success']) && $_GET['success'] == 2) 
 {
   $successMessage = "Sikeres törlés!";
-  $successClass = "alert-success";
 }
+
 
 ?>
 
